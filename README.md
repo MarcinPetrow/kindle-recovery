@@ -21,40 +21,40 @@ Program wymaga tylko Pythona 3.9 lub nowszego. PhotoRec jest opcjonalny i przyda
 Rozpoznanie obrazu:
 
 ```bash
-./kindle_recover.py inspect kindle.img
-./kindle_recover.py inspect kindle.img --json
+python3 kindle_recover.py inspect kindle.img
+python3 kindle_recover.py inspect kindle.img --json
 ```
 
 Pełne odzyskiwanie:
 
 ```bash
-./kindle_recover.py recover kindle.img -o wynik
+python3 kindle_recover.py recover kindle.img -o wynik
 ```
 
 Można wyłączyć poszczególne etapy:
 
 ```bash
-./kindle_recover.py recover kindle.img -o wynik --skip-fat
-./kindle_recover.py recover kindle.img -o wynik --skip-epub
-./kindle_recover.py recover kindle.img -o wynik --skip-mobi
+python3 kindle_recover.py recover kindle.img -o wynik --skip-fat
+python3 kindle_recover.py recover kindle.img -o wynik --skip-epub
+python3 kindle_recover.py recover kindle.img -o wynik --skip-mobi
 ```
 
 Sprawdzenie wcześniej odzyskanych książek i utworzenie `manifest.json`:
 
 ```bash
-./kindle_recover.py verify recovered/books
+python3 kindle_recover.py verify recovered/books
 ```
 
 Import wyników PhotoRec:
 
 ```bash
-./kindle_recover.py import-photorec recup_dir.* -o wynik/books
+python3 kindle_recover.py import-photorec recup_dir.* -o wynik/books
 ```
 
 Można też połączyć import z głównym odzyskiwaniem:
 
 ```bash
-./kindle_recover.py recover kindle.img -o wynik \
+python3 kindle_recover.py recover kindle.img -o wynik \
   --photorec-results recup_dir.1 recup_dir.2
 ```
 
