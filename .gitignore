@@ -1,0 +1,31 @@
+# Source disk images and forensic working copies
+*.img
+*.dd
+*.raw
+*.bin
+
+# Recovery output and PhotoRec artifacts
+recovered/
+wynik/
+recup_dir.*/
+photorec.se2
+report.xml
+
+# Recovered ebook files must not be committed
+*.epub
+*.mobi
+*.azw
+*.azw3
+*.azw8
+*.prc
+*.kfx
+*.kcr
+
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
